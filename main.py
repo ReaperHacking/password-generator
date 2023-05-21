@@ -1,5 +1,6 @@
 #Random Password Generator!
 import random
+import secrets
 
 regenerate = 'Y'
 
@@ -16,7 +17,7 @@ while regenerate == 'Y':
     for passwords in range(num):
         passwords = ''
         for char in range(len):
-            passwords += random.choice(chars)
+            passwords += secrets.choice(chars)
         print(passwords)
 
     regenerate = input("Do you want to regenerate more passwords? (Y/N): ").upper()
